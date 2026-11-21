@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Calculator App | ByteKeeper Labs</title>
+    <meta name="description" content="Privacy Policy for Calculator (com.bytekeeperlabs.calculator) by ByteKeeper Labs. 100% offline, zero data collection, complete privacy protection.">
+    <meta name="theme-color" content="#FF7A00">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #FF7A00;
+            --color-primary-light: #FF9E40;
+            --color-primary-dark: #D65C00;
+            --color-primary-glow: rgba(255, 122, 0, 0.15);
+            
+            --color-navy: #0F3460;
+            --color-green: #138808;
+            --color-green-light: #E8F5E9;
+            --color-green-text: #2E7D32;
+            
+            /* Light theme */
+            --bg-body: #F7F9FC;
+            --bg-card: #FFFFFF;
+            --bg-card-subtle: #F1F5F9;
+            --border-card: #E2E8F0;
+            --text-heading: #0F172A;
+            --text-body: #334155;
+            --text-muted: #64748B;
+            --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+            --header-blur: rgba(247, 249, 252, 0.85);
+            --badge-bg: #FFF0E5;
+            --badge-text: #D65C00;
+            --toc-active-bg: rgba(255, 122, 0, 0.08);
+        }
+
+        [data-theme="dark"] {
+            /* Dark theme */
+            --bg-body: #0F141C;
+            --bg-card: #181F2C;
+            --bg-card-subtle: #222B3C;
+            --border-card: #2D3748;
+            --text-heading: #F8FAFC;
+            --text-body: #CBD5E1;
+            --text-muted: #94A3B8;
+            --shadow-card: 0 4px 25px -2px rgba(0, 0, 0, 0.4), 0 2px 10px -1px rgba(0, 0, 0, 0.2);
+            --header-blur: rgba(15, 20, 28, 0.85);
+            --badge-bg: #2B1D14;
+            --badge-text: #FFA04D;
+            --toc-active-bg: rgba(255, 122, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            line-height: 1.7;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Banner Navigation */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: var(--header-blur);
+            border-bottom: 1px solid var(--border-card);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #FF7A00 0%, #D65C00 100%);
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 8px;
+            gap: 2px;
+            color: #FFFFFF;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 11px;
+            text-align: center;
+            line-height: 1;
+            box-shadow: 0 4px 12px rgba(255, 122, 0, 0.3);
+        }
+
+        .brand-text h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            letter-spacing: -0.01em;
+        }
+
+        .brand-text span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: block;
+            margin-top: -2px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-toggle {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            color: var(--text-heading);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px var(--color-primary-glow);
+        }
+
+        /* Hero Header */
+        .hero {
+            padding: 64px 24px 32px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        .hero-pill .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--color-green);
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            color: var(--text-heading);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+
+        /* Highlights Row */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            max-width: 1040px;
+            margin: 0 auto 48px;
+            padding: 0 24px;
+        }
+
+        .highlight-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--color-primary);
+        }
+
+        .highlight-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--badge-bg);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .highlight-content h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 4px;
+        }
+
+        .highlight-content p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        /* Content Layout */
+        .layout-container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 36px;
+            align-items: start;
+        }
+
+        /* Sidebar / Sticky TOC */
+        .toc-sidebar {
+            position: sticky;
+            top: 90px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .toc-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .toc-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+            font-weight: 500;
+        }
+
+        .toc-link:hover {
+            color: var(--color-primary);
+            background: var(--toc-active-bg);
+            transform: translateX(3px);
+        }
+
+        /* Policy Article */
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .policy-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-card);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .policy-meta strong {
+            color: var(--text-heading);
+        }
+
+        .policy-section {
+            margin-bottom: 36px;
+            scroll-margin-top: 100px;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            letter-spacing: -0.01em;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-section h2 .section-num {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .policy-section p {
+            margin-bottom: 14px;
+            color: var(--text-body);
+        }
+
+        .policy-section ul {
+            list-style: none;
+            margin: 14px 0 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .policy-section ul li {
+            position: relative;
+            padding-left: 24px;
+            color: var(--text-body);
+        }
+
+        .policy-section ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .notice-box {
+            background: var(--bg-card-subtle);
+            border-left: 4px solid var(--color-primary);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 18px 0;
+            font-size: 0.92rem;
+        }
+
+        .notice-box strong {
+            color: var(--text-heading);
+        }
+
+        .app-details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+
+        .app-details-table th,
+        .app-details-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        .app-details-table th {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            color: var(--text-heading);
+            background: var(--bg-card-subtle);
+            width: 35%;
+        }
+
+        .app-details-table td {
+            color: var(--text-body);
+        }
+
+        .contact-box {
+            background: var(--bg-card-subtle);
+            border: 1px dashed var(--border-card);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 16px;
+        }
+
+        .contact-box a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid var(--border-card);
+            background: var(--bg-card);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .site-footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            .site-header,
+            .toc-sidebar,
+            .theme-toggle,
+            .site-footer {
+                display: none !important;
+            }
+
+            body {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+            }
+
+            .layout-container {
+                display: block !important;
+                padding: 0 !important;
+            }
+
+            .policy-card {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+            }
+
+            .hero {
+                padding: 20px 0 !important;
+                text-align: left !important;
+            }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 860px) {
+            .layout-container {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-sidebar {
+                display: none;
+            }
+
+            .policy-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="brand-wrapper" id="brand-logo" aria-label="Calculator Home">
+                <div class="brand-icon" aria-hidden="true">
+                    <span>+</span>
+                    <span>−</span>
+                    <span>×</span>
+                    <span>=</span>
+                </div>
+                <div class="brand-text">
+                    <h2>Calculator</h2>
+                    <span>ByteKeeper Labs</span>
+                </div>
+            </a>
+            
+            <div class="header-actions">
+                <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme">
+                    <span id="theme-icon">🌙</span>
+                    <span id="theme-text">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="overview">
+        <div class="hero-pill">
+            <span class="dot"></span>
+            100% Offline • Zero Tracking • Privacy First
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="hero-subtitle">
+            Your privacy is non-negotiable. Learn how the Calculator application respects and guarantees your data sovereignty.
+        </p>
+    </section>
+
+    <!-- Key Highlights Grid -->
+    <div class="highlights-grid">
+        <div class="highlight-card">
+            <div class="highlight-icon">🔒</div>
+            <div class="highlight-content">
+                <h4>Zero Data Collection</h4>
+                <p>We do not collect, transmit, store, sell, or share any personal information whatsoever.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-card">
+            <div class="highlight-icon">📱</div>
+            <div class="highlight-content">
+                <h4>100% Local Storage</h4>
+                <p>Calculations, history, and user preferences never leave your physical device.</p>
+            </div>
+        </div>
+
+        <div class="highlight-card">
+            <div class="highlight-icon">🚫</div>
+            <div class="highlight-content">
+                <h4>No Trackers or Ads</h4>
+                <p>No ad networks, third-party analytics SDKs, or background telemetries are bundled.</p>
+            </div>
+        </div>
+
+        <div class="highlight-card">
+            <div class="highlight-icon">⚡</div>
+            <div class="highlight-content">
+                <h4>No Account Needed</h4>
+                <p>No sign-in, email, phone number, or cloud synchronization is ever required.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="layout-container">
+        <!-- Sticky Table of Contents -->
+        <aside class="toc-sidebar" aria-label="Table of Contents">
+            <div class="toc-title">Table of Contents</div>
+            <nav class="toc-nav">
+                <a href="#application-info" class="toc-link">1. Application Overview</a>
+                <a href="#information-collection" class="toc-link">2. Information Collection</a>
+                <a href="#local-data-storage" class="toc-link">3. Local Data Storage</a>
+                <a href="#device-permissions" class="toc-link">4. Device Permissions</a>
+                <a href="#third-parties" class="toc-link">5. Third-Party Services</a>
+                <a href="#children-privacy" class="toc-link">6. Children's Privacy</a>
+                <a href="#user-rights" class="toc-link">7. Data Control & Deletion</a>
+                <a href="#security" class="toc-link">8. Security Standards</a>
+                <a href="#policy-changes" class="toc-link">9. Policy Updates</a>
+                <a href="#contact" class="toc-link">10. Contact Developer</a>
+            </nav>
+        </aside>
+
+        <!-- Privacy Policy Details -->
+        <main>
+            <article class="policy-card">
+                <div class="policy-meta">
+                    <div><strong>Application:</strong> Calculator</div>
+                    <div><strong>Package:</strong> com.bytekeeperlabs.calculator</div>
+                    <div><strong>Developer:</strong> ByteKeeper Labs</div>
+                    <div><strong>Effective Date:</strong> November 2, 2026</div>
+                </div>
+
+                <!-- Section 1 -->
+                <section class="policy-section" id="application-info">
+                    <h2><span class="section-num">01.</span> Application Overview</h2>
+                    <p>
+                        This Privacy Policy applies to the mobile application <strong>Calculator</strong> (Package Name: <code>com.bytekeeperlabs.calculator</code>), developed and maintained by <strong>ByteKeeper Labs</strong> ("we", "our", or "us").
+                    </p>
+                    <p>
+                        The application is an all-in-one utility providing standard arithmetic operations, Indian number formatting (Lakhs & Crores), and financial & utility calculators (including GST, EMI, Compound/Simple Interest, SIP, Discount, Percentage, Number to Words, Age, Date Difference, Split Bill, and Profit & Loss).
+                    </p>
+                    <table class="app-details-table">
+                        <tbody>
+                            <tr>
+                                <th>App Name</th>
+                                <td>Calculator</td>
+                            </tr>
+                            <tr>
+                                <th>Package Name</th>
+                                <td>com.bytekeeperlabs.calculator</td>
+                            </tr>
+                            <tr>
+                                <th>Developer Entity</th>
+                                <td>ByteKeeper Labs</td>
+                            </tr>
+                            <tr>
+                                <th>Operational Mode</th>
+                                <td>Fully Offline (Autonomous)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Section 2 -->
+                <section class="policy-section" id="information-collection">
+                    <h2><span class="section-num">02.</span> Information Collection and Use</h2>
+                    <p>
+                        <strong>We do not collect any personal data or personally identifiable information (PII).</strong>
+                    </p>
+                    <p>When you use the Calculator app:</p>
+                    <ul>
+                        <li>We do not collect names, email addresses, phone numbers, or account credentials.</li>
+                        <li>We do not access or collect precise or coarse location data.</li>
+                        <li>We do not gather hardware identifiers (IMEI, MAC address, Android Advertising ID).</li>
+                        <li>We do not record keystrokes, contact lists, photos, or media files.</li>
+                        <li>We do not collect runtime usage statistics, telemetry, crash dumps, or behavioral analytics.</li>
+                    </ul>
+                    <div class="notice-box">
+                        <strong>Guaranteed Data Sovereignty:</strong> You do not need to register, create an account, or link any social profile to use any feature of this application.
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section class="policy-section" id="local-data-storage">
+                    <h2><span class="section-num">03.</span> On-Device Local Data Storage</h2>
+                    <p>
+                        Any data created during the usage of the Calculator is saved <strong>strictly on your local device</strong> via Android's protected application sandbox (using standard <code>SharedPreferences</code>):
+                    </p>
+                    <ul>
+                        <li><strong>Calculation History:</strong> Past mathematical expressions and results generated by you so you can review or reuse previous calculations.</li>
+                        <li><strong>User Preferences:</strong> Your customized preferences such as Theme Mode (Light/Dark/System), Indian Number Formatting toggle, Decimal Precision, and Sound/Haptic feedback toggles.</li>
+                    </ul>
+                    <p>
+                        This data is <strong>never transmitted</strong> over the internet, never backed up to remote proprietary servers, and cannot be accessed by other applications on your device.
+                    </p>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="policy-section" id="device-permissions">
+                    <h2><span class="section-num">04.</span> Device Permissions</h2>
+                    <p>
+                        The Calculator application is designed to be lightweight and strictly respectful of device security:
+                    </p>
+                    <ul>
+                        <li><strong>No Dangerous Permissions:</strong> The app does not request access to Camera, Microphone, Contacts, Location, SMS, or Phone State.</li>
+                        <li><strong>Vibrate (Haptics):</strong> The application requests the basic vibration permission purely to provide tactile haptic feedback when tapping buttons, which can be toggled off at any time in Settings.</li>
+                        <li><strong>No Internet Permission:</strong> The core calculator functions autonomously without requiring network calls or cloud connections.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5 -->
+                <section class="policy-section" id="third-parties">
+                    <h2><span class="section-num">05.</span> Third-Party Services & Tracking</h2>
+                    <p>
+                        Unlike many utility apps, Calculator contains <strong>zero third-party tracking or advertising frameworks</strong>:
+                    </p>
+                    <ul>
+                        <li>No third-party advertising SDKs (e.g., Google AdMob, Unity Ads, AppLovin).</li>
+                        <li>No tracking or behavioral analytics libraries (e.g., Firebase Analytics, Adjust, AppsFlyer).</li>
+                        <li>No third-party social media plugins or data-sharing APIs.</li>
+                    </ul>
+                    <p>
+                        Because no third-party SDKs are embedded, your usage patterns and device attributes cannot be monetized, profiled, or traded by third parties.
+                    </p>
+                </section>
+
+                <!-- Section 6 -->
+                <section class="policy-section" id="children-privacy">
+                    <h2><span class="section-num">06.</span> Children's Privacy (COPPA & Families Policy)</h2>
+                    <p>
+                        Our application does not address anyone under the age of 13 specifically, but it is entirely safe for users of all ages, including children and students. Because we do not collect any personal data whatsoever, our application fully complies with the United States Children's Online Privacy Protection Act (COPPA), the EU General Data Protection Regulation (GDPR), and the Google Play Families Policy.
+                    </p>
+                </section>
+
+                <!-- Section 7 -->
+                <section class="policy-section" id="user-rights">
+                    <h2><span class="section-num">07.</span> User Data Control & Deletion</h2>
+                    <p>
+                        You have total and absolute control over all data stored by the app on your phone:
+                    </p>
+                    <ul>
+                        <li><strong>Clear History:</strong> You can delete individual calculation records by tapping the delete icon, or clear the entire history log at once by tapping the trash icon in the History tab.</li>
+                        <li><strong>Reset Preferences:</strong> You can reset all preferences back to factory defaults at any time via the Settings screen.</li>
+                        <li><strong>Permanent Deletion:</strong> Clearing the app's cache/storage in your device's Android App Settings or uninstalling the app permanently purges all stored preferences and history from the device.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 8 -->
+                <section class="policy-section" id="security">
+                    <h2><span class="section-num">08.</span> Security Standards</h2>
+                    <p>
+                        We value your trust. Since no data leaves your mobile device, the risk of interception or server-side data breaches is eliminated at architectural level. Local storage is protected by Android's internal application sandboxing, which prevents other installed applications from reading your data.
+                    </p>
+                </section>
+
+                <!-- Section 9 -->
+                <section class="policy-section" id="policy-changes">
+                    <h2><span class="section-num">09.</span> Changes to This Privacy Policy</h2>
+                    <p>
+                        We may update this Privacy Policy from time to time. If updates occur, the revised version will be published here with an updated "Effective Date". We advise reviewing this page periodically for any updates.
+                    </p>
+                </section>
+
+                <!-- Section 10 -->
+                <section class="policy-section" id="contact">
+                    <h2><span class="section-num">10.</span> Contact Us</h2>
+                    <p>
+                        If you have any questions, feedback, or concerns regarding this Privacy Policy or the security of the Calculator application, please contact us at:
+                    </p>
+                    <div class="contact-box">
+                        <p><strong>Developer:</strong> ByteKeeper Labs</p>
+                        <p><strong>Application:</strong> Calculator (<code>com.bytekeeperlabs.calculator</code>)</p>
+                        <p><strong>Support & Inquiries:</strong> <a href="mailto:support@bytekeeperlabs.com">support@bytekeeperlabs.com</a></p>
+                        <p><strong>Website:</strong> <a href="https://bytekeeperlabs.com" target="_blank" rel="noopener noreferrer">https://bytekeeperlabs.com</a></p>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 ByteKeeper Labs. All rights reserved.</p>
+        <p>Calculator • Package ID: com.bytekeeperlabs.calculator</p>
+    </footer>
+
+    <!-- Theme Toggle JavaScript -->
+    <script>
+        (function() {
+            const toggleBtn = document.getElementById('theme-toggle-btn');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            // Check saved preference or system preference
+            const savedTheme = localStorage.getItem('calculator_policy_theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            function setTheme(isDark) {
+                if (isDark) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeIcon.textContent = '☀️';
+                    themeText.textContent = 'Light Mode';
+                    localStorage.setItem('calculator_policy_theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    themeIcon.textContent = '🌙';
+                    themeText.textContent = 'Dark Mode';
+                    localStorage.setItem('calculator_policy_theme', 'light');
+                }
+            }
+
+            // Initial theme application
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                setTheme(true);
+            } else {
+                setTheme(false);
+            }
+
+            // Click listener
+            toggleBtn.addEventListener('click', function() {
+                const isCurrentlyDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                setTheme(!isCurrentlyDark);
+            });
+        })();
+    </script>
+</body>
+</html>
